@@ -19,7 +19,7 @@ jobs:
         elixir-version: 1.9.4 # Define the elixir version [required]
         otp-version: 22.2 # Define the OTP version [required]
     - name: Install Dependencies
-      run: mix deps.get
+      run: cd kv && mix deps.get
     - name: Check formatting
       run: mix format --check-formatted
     - name: Run Tests
