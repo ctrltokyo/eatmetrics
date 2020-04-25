@@ -3,6 +3,7 @@ defmodule KVTest do
   doctest KV
 
   test "supervisor should be started" do
-    assert KV.Registry.create(KV.Registry, "shopping") == :ok
+    KV.Registry.create(KV.Registry, "metrics")
+    assert KV.Registry.lookup(KV.Registry, "metrics") != :error
   end
 end
